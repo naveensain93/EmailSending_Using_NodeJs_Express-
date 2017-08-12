@@ -12,8 +12,8 @@ var router = express.Router();
 var mailer = nodemailer.createTransport({
 	service: "Gmail", 
     auth: {
-    	user: "naveen.bizviz@gmail.com",
-    	pass: "naveen$@!n93"
+    	user: "sender@gmail.com",
+    	pass: "password"
     }
 });
 
@@ -31,7 +31,7 @@ sendemail = function(req, res) {
 	var email = req.params.emailid;
 	console.log(email);  
 	mailer.sendMail({
-		  to: 'naveen.sain@bdbizviz.com',
+		  to: 'receiver@gmail.com',
 		  subject: 'Node Js Email Demo',
 		  html: "<p>here your data goes</p>"
 		  /*template: 'recover',
